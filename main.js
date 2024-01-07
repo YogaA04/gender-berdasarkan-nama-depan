@@ -32,6 +32,7 @@ const showResult = (name, gender, probability) => {
 
 const predict = async(event) => {
     if (event.key === "Enter") {
+        event.preventDefault()
         document.getElementById('myInput').blur()
         loader.classList.add('loading')
         main.style.filter = 'blur(10px)'
